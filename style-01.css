@@ -1,6 +1,9 @@
+/* Resets & Universal */
+
 *, *::before, *::after {
     margin: 0;
     box-sizing: border-box;
+    font-family: 'Figtree', sans-serif, system-ui;
 }
 
 menu, ul, ol {
@@ -25,19 +28,23 @@ svg:not(header svg) {
     justify-self: center;
 }
 
+img {
+    width: 100%;
+}
+
 /* Color variables */
 
 :root {
-    --black: ;
-    --main-color: ;
-    --accent-01: ;
+    --black: #373a3e;
+    --main-color: #bff1f2;
+    --accent-01: #49cac5;
 }
 
 
 /* Main Grid */
 
 .grid-container {
-    height: 100vh;
+    background-color: var(--black);
     display: grid;
     grid-template: auto 1fr / auto 3fr;
     gap: 1rem;
@@ -45,6 +52,9 @@ svg:not(header svg) {
 
 .sidebar {
     grid-row: 1 / 3;
+    background-color: var(--main-color);
+    border: 4px solid var(--accent-01);
+    border-radius: 8px;
 }
 
 .grid-container {
@@ -70,6 +80,7 @@ nav {
 }
 
 header, nav a {
+    color: var(--accent-01);
     display: grid;
     grid-template-columns: 2rem 1fr;
     gap: 16px;
@@ -78,6 +89,19 @@ header, nav a {
 
 nav a {
     padding: 8px 16px;
+}
+
+h1 {
+    font-weight: 500;
+}
+
+nav a:hover {
+    background-color: var(--accent-01);
+    color: var(--main-color);
+}
+
+header svg, nav svg {
+    fill: currentColor;
 }
 
 /* Profile */
@@ -136,7 +160,6 @@ main {
 
 .card {
     padding: 16px;
-    background-color: aqua;
     border-radius: 8px;
     border-left: 8px solid;
 
@@ -144,21 +167,30 @@ main {
     gap: 16px;
 }
 
+.buttons {
+    display: grid;
+    grid-template-columns: repeat(3, auto);
+    gap: 16px;
+    justify-content: end;
+}
+
+/* Announcements */
+
 .announcements-container {
-    background-color: black;
+    background-color: ;
     margin-top: 16px;
     border-radius: 8px;
 }
 
 .announcements-grid {
-    border: 16px solid white;
+    border: 16px solid ;
     border-radius: 7px;
     display: grid;
     gap: 1px;
 }
 
 .announcement {
-    background-color: white;
+    background-color: ;
 }
 
 
@@ -182,11 +214,13 @@ main {
     padding: 16px 8px;
 }
 
+/* Trending */
+
 .trending-grid {
     border-radius: 8px;
     padding: 16px;
     margin-top: 16px;
-    background-color: white;
+    background-color: ;
     display: grid;
     gap: 16px;
 }
