@@ -30,6 +30,7 @@ svg:not(header svg) {
 
 img {
     width: 100%;
+    border-radius: 50%;
 }
 
 /* Color variables */
@@ -107,31 +108,93 @@ header svg, nav svg {
 /* Profile */
 
 .profile {
+    background-color: var(--accent-01);
+    border-radius: 8px;
+    color: var(--black);
     padding: 16px;
     display: grid;
     grid-template-columns: 3fr 2fr;
     gap: 16px;
+    align-items: center;
 }
 
 .search, .greeting {
     display: grid;
     grid-template-columns: auto 1fr;
     gap: 16px;
+    align-items: center;
 }
 
 .notification {
     display: grid;
     grid-template-columns: repeat(3, auto);
-    justify-content: center;
-    gap: 16px;
+    justify-content: end;
+    gap: 32px;
+    align-items: center;
 }
 
 .create {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 16px;
+    grid-template-columns: repeat(3, auto);
+    gap: 32px;
     align-items: center;
-    justify-items: center;
+    justify-content: end;
+}
+
+.profile svg {
+    fill: var(--black);
+}
+
+#avatar-notif {
+    width: 25px;
+}
+
+#avatar-greeting {
+    width: 50px;
+}
+
+input[type="search"] {
+    background: none;
+    border: 2px solid var(--black);
+    border-radius: 8px;
+    font-size: 1rem;
+    padding: 2px 8px;
+    color: var(--black);
+}
+
+input::-webkit-search-cancel-button {
+    -webkit-appearance: none;
+}
+
+input[type="search"]:focus {
+    outline: 2px solid var(--main-color);
+}
+
+input::placeholder {
+    color: var(--black);
+}
+
+.profile p {
+    font-weight: 600;
+}
+
+.greeting p:first-child {
+    font-size: 0.8rem;
+}
+
+.greeting p:last-child {
+    font-size: 1.25rem;
+}
+
+button {
+    background: none;
+    border: 2px solid var(--black);
+    padding: 8px 32px;
+    border-radius: 8px;
+}
+
+button:hover {
+    background: var(--main-color)
 }
 
 /* Main Layout */
@@ -154,7 +217,8 @@ main {
 .projects-grid {
     padding: 16px 0;
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(45ch, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-auto-rows: 1fr;
     gap: 16px;
 }
 
