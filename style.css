@@ -267,3 +267,39 @@ h3 {
     border-top: 1px solid;
     border-bottom: 1px solid;
 }
+
+/* Trending Styles */
+
+.trending {
+    padding-top: 16px;
+}
+
+.trending-container {
+    padding: 16px;
+    background-color: #fff;
+    border-radius: 12px;
+    box-shadow: 2px 2px 8px -4px;
+
+    display: grid;
+    gap: 8px;
+}
+
+.avatar img {
+    border-radius: 50%;
+}
+
+.user {
+    display: grid;
+    grid-template-columns: 3rem 1fr;
+    align-items: center;
+    gap: 8px;
+}
+
+.user p {
+    font-weight: lighter;
+    font-size: 0.8rem;
+}
+
+.user:nth-of-type(2) img {
+    background-color: gold;
+}
