@@ -219,7 +219,6 @@ h3 {
 }
 
 .card {
-    
     padding: 24px;
 
     display: grid;
@@ -233,4 +232,38 @@ h3 {
 .description {
     font-size: 0.9rem;
     font-weight: 200;
+}
+
+/* Main Sidebar */
+
+.main-sidebar {
+    padding: 16px;
+}
+
+.announcement-container {
+    background-color: #fff;
+    padding: 16px;
+    border-radius: 12px;
+    box-shadow: 2px 2px 8px -4px;
+
+    display: grid;
+}
+
+.announcement p.title {
+    font-size: 0.9rem;
+}
+
+.announcement p.description {
+    font-size: 0.7rem;
+}
+
+.announcement {
+    padding: 16px;
+    display: grid;
+    gap: 8px;
+}
+
+.announcement:nth-child(2) {
+    border-top: 1px solid;
+    border-bottom: 1px solid;
 }
